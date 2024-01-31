@@ -19,7 +19,8 @@
          :body    (io/input-stream (io/resource "public/index.html"))})
     "/trailer"
     {:status  200
-     :headers {"Content-Type" "text/html"}
+     :headers {"Content-Type" "text/html"
+               "Refresh"      "46; url=/"}
      :body    (io/input-stream (io/resource "public/trailer.html"))}
     "/generate_trailer"
     (if-let [body (some-> (:body request) slurp)]

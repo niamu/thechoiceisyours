@@ -138,11 +138,11 @@ body:has(video) footer {
 .sprite-logo-vr {
     background-position: 0 -407.5px;
     width: 150px;
-    height: 38.5px;
+    height: 39px;
 }
 .sprite-logo-wb {
     background-position: -151px -407.5px;
     width: 115px;
-    height: 31.5px;
+    height: 32px;
     justify-self: flex-end;
 }

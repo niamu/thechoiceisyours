@@ -9,13 +9,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:url" content="https://thechoiceisyours.whatisthematrix.com/">
   <meta name="twitter:url" content="https://thechoiceisyours.whatisthematrix.com/">
-  <meta name="description" content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
-  <meta property="og:description" content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
+  <meta name="description"
+        content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
+  <meta property="og:description"
+        content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
+  <meta name="twitter:description"
+        content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
   <meta name="twitter:site" content="@WarnerBrosCA">
   <meta property="og:title" content="CHOOSE YOUR REALITY">
   <meta name="twitter:title" content="CHOOSE YOUR REALITY">
   <meta property="og:locale" content="en_CA">
-  <meta name="twitter:description" content="The Matrix is everywhere; it’s here and now. Make your choice to experience a new reality. It’s time to wake up.">
   <meta property="og:image" content="/meta-sm.jpg">
   <meta name="twitter:image" content="/meta-sm.jpg">
 </head>
@@ -38,30 +41,36 @@
     <script type="text/javascript">
       document.querySelector("form").addEventListener("submit", function(event){
         event.preventDefault();
+
         var b = Math.floor(Math.random() * 3) + 1;
         var e = Math.floor(Math.random() * 3) + 1;
         var g = Math.floor(Math.random() * 3) + 1;
         var h = Math.floor(Math.random() * 3) + 1;
+
         var bSegment = document.createElement("input");
         bSegment.type = "hidden";
         bSegment.name = "b";
         bSegment.value = b;
         this.appendChild(bSegment);
+
         var eSegment = document.createElement("input");
         eSegment.type = "hidden";
         eSegment.name = "e";
         eSegment.value = e;
         this.appendChild(eSegment);
+
         var gSegment = document.createElement("input");
         gSegment.type = "hidden";
         gSegment.name = "g";
         gSegment.value = g;
         this.appendChild(gSegment);
+
         var hSegment = document.createElement("input");
         hSegment.type = "hidden";
         hSegment.name = "h";
         hSegment.value = h;
         this.appendChild(hSegment);
+
         var d = new Date();
         d.setSeconds(d.getSeconds() + 25);
         var inputTime = document.createElement("input");
@@ -69,6 +78,7 @@
         inputTime.name = "time";
         inputTime.value = ("" + d.getHours()).padStart(2, "0") + ("" + d.getMinutes()).padStart(2, "0");
         this.appendChild(inputTime);
+
         this.submit();
       });
     </script>

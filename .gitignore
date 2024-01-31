@@ -1,0 +1,6 @@
+.DS_Store
+.cpcache/
+.nrepl-port
+resources/public/output.mp4
+resources/segments
+resources/video_segments.txt

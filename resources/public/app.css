@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("librebaskerville-regular.woff") format("woff");
+}
+*, :after, :before{
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+h1 {
+    text-indent: -200vw;
+    height: 0;
+    margin: 0;
+}
+h2 {
+    font-family: "Libre Baskerville", serif;
+    color: #797979;
+    font-size: 22.5px;
+    text-transform: uppercase;
+}
+body, html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: rgba(88, 93, 95, 0.4);
+    text-align: center;
+    line-height: 1.2;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+body:has(video) {
+    background: #000;
+}
+body > div {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+video {
+    width: 100%;
+    height: auto;
+}
+button {
+    background-color: transparent;
+    border: none;
+    text-indent: -200vw;
+    cursor: pointer;
+}
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+.pill {
+    position: relative;
+    display: inline-block;
+    width: 115px;
+    height: 406.5px;
+    background-size: 564px 446px;
+    margin: 45px 15px -192px;
+    transition: 0.3s ease-out;
+    pointer-events: none;
+
+    &::before, &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url("sprite-desktop-default.png");
+        background-size: inherit;
+        width: inherit;
+        height: inherit;
+        transition: inherit;
+        z-index: -1;
+    }
+
+    &::before {
+        /* active-shadow */
+        opacity: 1;
+        background-position: -232px 0;
+    }
+    &:hover::before {
+        opacity: 0;
+    }
+
+    &::after {
+        /* pill-shadow */
+        opacity: 0;
+        background-position: 0 0;
+    }
+    &:hover::after {
+        opacity: 0.7;
+    }
+
+    & [value="red"], & [value="blue"] {
+        position: relative;
+        top: 35px;
+        width: 70px;
+        height: 180px;
+        background-image: url("sprite-desktop-default.png");
+        background-size: inherit;
+        pointer-events: auto;
+    }
+    & [value="red"] { background-position: -370px -35px; }
+    & [value="blue"] { background-position: -138px -35px; }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+}
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    padding: 1rem;
+}
+body:has(video) footer {
+    display: none;
+}
+.sprite-logo-vr, .sprite-logo-wb {
+    flex-shrink: 0;
+    background-image: url("sprite-desktop-default.png");
+    background-size: 564px 446px;
+    opacity: 0.4;
+    margin: 1rem auto;
+}
+.sprite-logo-vr {
+    background-position: 0 -407.5px;
+    width: 150px;
+    height: 38.5px;
+}
+.sprite-logo-wb {
+    background-position: -151px -407.5px;
+    width: 115px;
+    height: 31.5px;
+    justify-self: flex-end;
+}
